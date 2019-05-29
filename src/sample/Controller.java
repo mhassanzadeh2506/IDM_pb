@@ -67,7 +67,8 @@ public class Controller  {
             String[] str = info[0].split("[.]");
             int size = str.length;
 //    String name, int size, Status status, String date, String address, long downloaded, String suffix
-            File newfile = new File(info[0], Integer.parseInt(info[1]), Status.downloading, Main.time(), txt_url.getText(), str[size - 1]);
+            File newfile = new File(str[1], Integer.parseInt(info[1]), Status.downloading, Main.time(), txt_url.getText(), str[size - 1]);
+
             System.out.println(newfile.getStatus());
             Main.fileObservableList.add(newfile);
             ctl.passFileFunction(newfile);
@@ -93,9 +94,9 @@ public class Controller  {
             }
         }
         col_tbl1_name.setCellValueFactory(new PropertyValueFactory<File, String>("col_tbl1_name"));
-//        col_tbl1_size.setCellValueFactory(new PropertyValueFactory<File, Integer>("col_tbl1_size"));
+        col_tbl1_size.setCellValueFactory(new PropertyValueFactory<File, Integer>("col_tbl1_size"));
         col_tbl1_status.setCellValueFactory(new PropertyValueFactory<File, Status>("col_tbl1_status"));
-//        col_tbl1_date.setCellValueFactory(new PropertyValueFactory<File, String>("col_tbl1_date"));
+        col_tbl1_date.setCellValueFactory(new PropertyValueFactory<File, String>("col_tbl1_date"));
         col_tbl1_Address.setCellValueFactory(new PropertyValueFactory<File, String>("col_tbl1_Address"));
         col_tbl1_Suffix.setCellValueFactory(new PropertyValueFactory<File, String>("col_tbl1_date"));
         tbl1_downloaded.setItems(Main.fileObservableList);

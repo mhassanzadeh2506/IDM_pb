@@ -28,7 +28,7 @@ public class MultiThread implements Runnable {
             URL url = new URL(file.getAddress());
             URLConnection urlConnection = url.openConnection();
 
-            java.io.File FileDownloaded = new File("E:\\Games\\"+file.getName());
+            java.io.File FileDownloaded = new File("E:\\Games\\"+file.getName()+"."+file.getSuffix());
             FileOutputStream fos = new FileOutputStream(FileDownloaded);//, FileDownloaded.exists());
             ReadableByteChannel rbc = Channels.newChannel(urlConnection.getInputStream());
             long downloaded = 0;
