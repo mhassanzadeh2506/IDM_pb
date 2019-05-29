@@ -38,21 +38,7 @@ ArrayList<Thread> t=new ArrayList<>();
 
     public void resume(ActionEvent event) throws IOException {
         file.setStatus(Status.downloading);
-        URL url = new URL(file.getAddress());
-        URLConnection urlConnection = url.openConnection();
 
-        java.io.File FileDownloaded = new java.io.File("E:\\Games\\"+file.getName());
-        FileOutputStream fos = new FileOutputStream(FileDownloaded);//, FileDownloaded.exists());
-        ReadableByteChannel rbc = Channels.newChannel(urlConnection.getInputStream());
-        long downloaded = 0;
-//            boolean OnDownload = true;
-
-        while((downloaded = fos.getChannel().transferFrom(rbc, file.getDownloaded(), 1024)) > 0 && file.getStatus().equals(Status.downloading))
-        {
-            file.setDownloaded(file.getDownloaded()+downloaded);
-            System.out.println(file.getDownloaded());
-            //   file.downloaded += downloaded;
-        }
     }
 
     public void passFileFunction(File file) {

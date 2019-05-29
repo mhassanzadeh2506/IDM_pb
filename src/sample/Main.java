@@ -15,7 +15,21 @@ import java.util.Calendar;
 
 public class Main extends Application {
     public static ObservableList<File>fileObservableList= FXCollections.observableArrayList();
-    public static ObservableList<File>Downloaded= FXCollections.observableArrayList();
+
+    public static ObservableList<File>PPt= FXCollections.observableArrayList();
+    public static ObservableList<File>Pdf= FXCollections.observableArrayList();
+    public static ObservableList<File>Doc= FXCollections.observableArrayList();
+    public static ObservableList<File>Docx= FXCollections.observableArrayList();
+
+
+    public static ObservableList<File>RAR= FXCollections.observableArrayList();
+    public static ObservableList<File>Zip= FXCollections.observableArrayList();
+
+
+    public static ObservableList<File>Mp4= FXCollections.observableArrayList();
+    public static ObservableList<File>Mp3= FXCollections.observableArrayList();
+
+    public static ObservableList<File>Others= FXCollections.observableArrayList();
     public static ArrayList<Thread>threads=new ArrayList<>();
     public static String time(){
         Calendar cal = Calendar.getInstance();

@@ -21,7 +21,7 @@ import java.net.UnknownHostException;
 import java.util.ResourceBundle;
 
 
-public class Controller  {
+public class Controller implements Initializable {
 
     @FXML
     private TableView<File> tbl1_downloaded;
@@ -38,9 +38,12 @@ public class Controller  {
     @FXML
     private TableColumn<File, String> col_tbl1_Suffix;
 
-    @FXML private TextField txt_url;
-    @FXML  private Button btn_download;
-    @FXML  private Button ppt;
+    @FXML
+    private TextField txt_url;
+    @FXML
+    private Button btn_download;
+    @FXML
+    private Button ppt;
 
     public void download(ActionEvent event) {
 
@@ -54,7 +57,7 @@ public class Controller  {
         }
         Controller_down ctl = fxmlLoader.getController();
 
-                      //"http://strony.ug.edu.pl/~matjs/Wyklady/Systemy/Systop1_UG.ppt"
+        //"http://strony.ug.edu.pl/~matjs/Wyklady/Systemy/Systop1_UG.ppt"
 
         String tmp = null;
         try {
@@ -90,19 +93,68 @@ public class Controller  {
     }
 
     public void ppt(ActionEvent event) {
-        for (int i = 0; i <Main.fileObservableList.size(); i++) {
-            if(Main.fileObservableList.get(i).getStatus().equals(Status.downloaded)){
-                Main.Downloaded.add(Main.fileObservableList.get(i));
+        for (int i = 0; i < Main.fileObservableList.size(); i++) {
+            if (Main.fileObservableList.get(i).getSuffix().equals("ppt")) {
+                Main.PPt.add(Main.fileObservableList.get(i));
             }
         }
+
+        tbl1_downloaded.setItems(Main.PPt);
+
+    }
+
+    public void pdf(ActionEvent event) {
+        for (int i = 0; i < Main.fileObservableList.size(); i++) {
+            if (Main.fileObservableList.get(i).getSuffix().equals("pdf")) {
+                Main.Pdf.add(Main.fileObservableList.get(i));
+            }
+        }
+        tbl1_downloaded.setItems(Main.Pdf);
+
+    }
+
+    public void doc(ActionEvent event) {
+        for (int i = 0; i < Main.fileObservableList.size(); i++) {
+            if (Main.fileObservableList.get(i).getSuffix().equals("doc")) {
+                Main.Doc.add(Main.fileObservableList.get(i));
+            }
+        }
+        tbl1_downloaded.setItems(Main.Doc);
+    }
+    public void docx(ActionEvent event){
+        for (int i = 0; i < Main.fileObservableList.size(); i++) {
+            if (Main.fileObservableList.get(i).getSuffix().equals("docx")) {
+                Main.Docx.add(Main.fileObservableList.get(i));
+            }
+        }
+        tbl1_downloaded.setItems(Main.Docx);
+    }
+   public void rar(ActionEvent event){
+        for (int i = 0; i < Main.fileObservableList.size(); i++) {
+            if (Main.fileObservableList.get(i).getSuffix().equals("rar")) {
+                Main.RAR.add(Main.fileObservableList.get(i));
+            }
+        }
+        tbl1_downloaded.setItems(Main.RAR);
+    }
+
+   public void zip(ActionEvent event){
+        for (int i = 0; i < Main.fileObservableList.size(); i++) {
+            if (Main.fileObservableList.get(i).getSuffix().equals("zip")) {
+                Main.Zip.add(Main.fileObservableList.get(i));
+            }
+        }
+        tbl1_downloaded.setItems(Main.Zip);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
         col_tbl1_name.setCellValueFactory(new PropertyValueFactory<File, String>("col_tbl1_name"));
         col_tbl1_size.setCellValueFactory(new PropertyValueFactory<File, Integer>("col_tbl1_size"));
         col_tbl1_status.setCellValueFactory(new PropertyValueFactory<File, Status>("col_tbl1_status"));
         col_tbl1_date.setCellValueFactory(new PropertyValueFactory<File, String>("col_tbl1_date"));
         col_tbl1_Address.setCellValueFactory(new PropertyValueFactory<File, String>("col_tbl1_Address"));
         col_tbl1_Suffix.setCellValueFactory(new PropertyValueFactory<File, String>("col_tbl1_date"));
-        tbl1_downloaded.setItems(Main.fileObservableList);
-
     }
 
 //    String fileURL = "Ydw";
