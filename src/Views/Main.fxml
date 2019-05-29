@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane layoutX="2.0" layoutY="50.0" prefHeight="658.0" prefWidth="907.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Accordion layoutX="6.0" layoutY="8.0" prefHeight="647.0" prefWidth="202.0">
+              <panes>
+                <TitledPane animated="false" text="Compressed">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button layoutY="-1.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="202.0" text=".rar" />
+                              <Button layoutY="30.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="202.0" text=".zip" />
+                              <ButtonBar layoutX="-22.0" layoutY="134.0" prefHeight="40.0" prefWidth="200.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Documents">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="ppt" layoutX="-10.0" layoutY="-1.0" mnemonicParsing="false" onAction="#ppt" prefHeight="31.0" prefWidth="209.0" text="ppt" />
+                           </children></AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" prefWidth="202.0" text="Media">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+                  <TitledPane animated="false" text="Others">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </TitledPane>
+              </panes>
+            </Accordion>
+            <TabPane layoutX="208.0" layoutY="-3.0" prefHeight="658.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Download Tab">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="50.0">
+                           <children>
+                              <TextField fx:id="txt_url" layoutX="5.0" layoutY="14.0" prefHeight="31.0" prefWidth="667.0" promptText="URL" />
+                              <Button fx:id="btn_download" layoutX="260.0" layoutY="105.0" mnemonicParsing="false" onAction="#download" prefHeight="31.0" prefWidth="166.0" text="Start Download" />
+                              <TextField fx:id="txt_location" layoutX="4.0" layoutY="54.0" prefHeight="31.0" prefWidth="669.0" promptText="Location" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Downloaded Files">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tbl1_downloaded" layoutX="120.0" layoutY="126.0" prefHeight="619.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="col_tbl1_name" prefWidth="75.0" text="Name" />
+                                  <TableColumn fx:id="col_tbl1_size" prefWidth="75.0" text="Size" />
+                                    <TableColumn fx:id="col_tbl1_status" prefWidth="75.0" text="Models.Status" />
+                                    <TableColumn fx:id="col_tbl1_date" prefWidth="75.0" text="Date" />
+                                    <TableColumn fx:id="col_tbl1_Address" prefWidth="75.0" text="Address" />
+                                    <TableColumn fx:id="col_tbl1_Suffix" prefWidth="75.0" text="Suffix" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
