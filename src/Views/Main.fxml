@@ -33,12 +33,19 @@
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
                               <Button fx:id="ppt" layoutX="-10.0" layoutY="-1.0" mnemonicParsing="false" onAction="#ppt" prefHeight="31.0" prefWidth="209.0" text="ppt" />
+                              <Button fx:id="pdf" layoutX="-6.0" layoutY="30.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="211.0" text="pdf" />
+                              <Button fx:id="doc" layoutX="-5.0" layoutY="61.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="210.0" text="doc" />
+                              <Button fx:id="docx" layoutY="92.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="202.0" text="docx" />
                            </children></AnchorPane>
                   </content>
                 </TitledPane>
                 <TitledPane animated="false" prefWidth="202.0" text="Media">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button layoutY="-2.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="202.0" text="mp4" />
+                              <Button layoutX="-1.0" layoutY="29.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="202.0" text="mp3" />
+                           </children></AnchorPane>
                   </content>
                 </TitledPane>
                   <TitledPane animated="false" text="Others">
@@ -65,7 +72,7 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TableView fx:id="tbl1_downloaded" layoutX="120.0" layoutY="126.0" prefHeight="619.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <TableView fx:id="tbl1_downloaded" layoutX="120.0" layoutY="31.0" prefHeight="588.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
                                 <columns>
                                   <TableColumn fx:id="col_tbl1_name" prefWidth="75.0" text="Name" />
                                   <TableColumn fx:id="col_tbl1_size" prefWidth="75.0" text="Size" />
@@ -75,6 +82,7 @@
                                     <TableColumn fx:id="col_tbl1_Suffix" prefWidth="75.0" text="Suffix" />
                                 </columns>
                               </TableView>
+                              <Button fx:id="see_all" layoutY="-1.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="120.0" text="See All" />
                            </children>
                         </AnchorPane>
                   </content>

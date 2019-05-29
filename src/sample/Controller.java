@@ -53,7 +53,9 @@ public class Controller  {
             e.printStackTrace();
         }
         Controller_down ctl = fxmlLoader.getController();
-//"http://strony.ug.edu.pl/~matjs/Wyklady/Systemy/Systop1_UG.ppt"
+
+                      //"http://strony.ug.edu.pl/~matjs/Wyklady/Systemy/Systop1_UG.ppt"
+
         String tmp = null;
         try {
             tmp = HttpUrl.downloadFile(txt_url.getText());
