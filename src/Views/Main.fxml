@@ -32,19 +32,14 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <Button layoutY="-2.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="202.0" text="mp4" />
-                              <Button layoutX="-1.0" layoutY="29.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="202.0" text="mp3" />
+                              <Button fx:id="mp4" layoutY="-2.0" mnemonicParsing="false" onAction="#mp4" prefHeight="31.0" prefWidth="202.0" text="mp4" />
+                              <Button fx:id="mp3" layoutX="-1.0" layoutY="29.0" mnemonicParsing="false" onAction="#mp3" prefHeight="31.0" prefWidth="202.0" text="mp3" />
                            </children></AnchorPane>
                   </content>
                 </TitledPane>
-                  <TitledPane animated="false" text="Others">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                    </content>
-                  </TitledPane>
                 <TitledPane animated="false" text="Documents">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="200.0">
                            <children>
                               <Button fx:id="ppt" layoutX="-10.0" layoutY="-1.0" mnemonicParsing="false" onAction="#ppt" prefHeight="31.0" prefWidth="209.0" text="ppt" />
                               <Button fx:id="pdf" layoutX="-6.0" layoutY="30.0" mnemonicParsing="false" onAction="#pdf" prefHeight="31.0" prefWidth="211.0" text="pdf" />
@@ -53,6 +48,11 @@
                            </children></AnchorPane>
                   </content>
                 </TitledPane>
+                  <TitledPane animated="false" text="Others">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </TitledPane>
               </panes>
             </Accordion>
             <TabPane layoutX="208.0" layoutY="-3.0" prefHeight="658.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">

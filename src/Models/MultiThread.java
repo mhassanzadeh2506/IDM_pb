@@ -27,8 +27,31 @@ public class MultiThread implements Runnable {
         try {//"http://strony.ug.edu.pl/~matjs/Wyklady/Systemy/Systop1_UG.ppt"
             URL url = new URL(file.getAddress());
             URLConnection urlConnection = url.openConnection();
+            File FileDownloaded=null;
+            switch (file.getSuffix()) {
+                case "ppt":
+                case "pdf":
+                case "doc":
+                case "docx": {
+                     FileDownloaded = new File("E:\\Games\\document\\" + file.getName() + "." + file.getSuffix());
+                    break;
+                }
+                case "mp4":
+                case "mp3": {
+                     FileDownloaded = new File("E:\\Games\\media\\" + file.getName() + "." + file.getSuffix());
+                    break;
+                }
+                case "zip":
+                case "rar": {
+                     FileDownloaded = new File("E:\\Games\\compressed\\" + file.getName() + "." + file.getSuffix());
+                    break;
+                }
+                default: {
+                     FileDownloaded = new File("E:\\Games\\other\\" + file.getName() + "." + file.getSuffix());
+                    break;
+                }
+            }
 
-            java.io.File FileDownloaded = new File("E:\\Games\\"+file.getName()+"."+file.getSuffix());
             FileOutputStream fos = new FileOutputStream(FileDownloaded);//, FileDownloaded.exists());
             ReadableByteChannel rbc = Channels.newChannel(urlConnection.getInputStream());
             long downloaded = 0;
@@ -41,10 +64,12 @@ public class MultiThread implements Runnable {
              //   file.downloaded += downloaded;
             }
 
+
             if (file.getSize()==file.getDownloaded())
             file.setStatus(Status.downloaded);
             else if (file.getDownloaded()<file.getSize())
                 file.setStatus(Status.paused);
+
 
             System.out.println(file.getStatus());
             fos.close();
