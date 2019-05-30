@@ -52,7 +52,7 @@ public class MultiThread implements Runnable {
                 }
             }
 
-            FileOutputStream fos = new FileOutputStream(FileDownloaded);//, FileDownloaded.exists());
+            FileOutputStream fos = new FileOutputStream(FileDownloaded);// FileDownloaded.exists());
             ReadableByteChannel rbc = Channels.newChannel(urlConnection.getInputStream());
             long downloaded = 0;
 //            boolean OnDownload = true;

@@ -51,7 +51,7 @@ public class HttpUrl {
             }
         }
         catch (Exception e){
-            System.out.println("0000");
+            System.out.println("wrong url");
             System.out.println(e.getMessage());
         }
 //
