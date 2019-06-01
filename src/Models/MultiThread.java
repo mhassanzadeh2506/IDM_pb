@@ -34,7 +34,9 @@ public class MultiThread implements Runnable {
                 case "doc":
                 case "docx": {
                      FileDownloaded = new File("E:\\Games\\document\\" + file.getName() + "." + file.getSuffix());
-                    break;
+
+                     break;
+
                 }
                 case "mp4":
                 case "mp3": {
