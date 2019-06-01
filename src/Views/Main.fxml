@@ -11,7 +11,7 @@
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <AnchorPane layoutX="2.0" layoutY="50.0" prefHeight="658.0" prefWidth="907.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -63,7 +63,6 @@
                            <children>
                               <TextField fx:id="txt_url" layoutX="5.0" layoutY="14.0" prefHeight="31.0" prefWidth="667.0" promptText="URL" />
                               <Button fx:id="btn_download" layoutX="260.0" layoutY="105.0" mnemonicParsing="false" onAction="#download" prefHeight="31.0" prefWidth="166.0" text="Start Download" />
-                              <TextField fx:id="txt_location" layoutX="4.0" layoutY="54.0" prefHeight="31.0" prefWidth="669.0" promptText="Location" />
                            </children>
                         </AnchorPane>
                   </content>
